@@ -1,0 +1,108 @@
+body
+h1{
+  color: yellow;
+}
+
+
+body {
+    font-size: 15pt;
+    margin:0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    flex-direction: column;
+}
+
+.block{
+   width: 690px;
+   height: 700px;
+   background: #5662E8;
+   position: relative;
+   margin-top: 20px;
+}
+.glow:before,.glow:after{
+   content: " ";
+   position: absolute;
+ top:-10px;
+ left: -10px;
+   width: calc(690px + 20px);
+     height: calc(850px + 20px);
+background: linear-gradient(45deg,#EB15C0,#15BAEB,#C4EB15,#EB1515,#32EB15,#9A0691);
+z-index: -1;
+background-size: 400%;
+border-radius: 10px;
+animation: change 10s linear infinite;
+}
+@keyframes change {
+   0%{
+      background-position: 0px 0px;
+      
+   }
+      50%{
+         background-position: 400% ,0;
+      }
+        100%{
+                 background-position: 0px 0px;
+                 background-size:  100%;
+
+        }
+
+
+}
+
+.glow:after{
+   filter: blur(50px);
+}
+
+
+.kaat{
+   display: block;
+   width:  200px;
+   height:125px;
+   background: lightcyan;
+   position:relative;
+   margin-top: 30vh;
+      margin-bottom: 30vh;
+      border-radius: 12px;
+
+
+   
+}
+.kaal:before{
+   content: " ";
+   width: calc(200px + 6px);
+   height: 125px;
+   position: absolute;
+   z-index: -1;
+   background: red;
+   border-radius: 30px;
+   border-top-right-radius: 12px;
+   animation:  che 12s linear infinite;
+background-size: 400%;
+}
+@keyframes che{
+ from{
+         transform: rotate(0deg);
+        
+
+ }
+ to{
+             transform: rotate(360deg);
+
+            
+
+   }
+}
+.kaal:after{
+   content: " ";
+   background:green;
+   width:100px;
+      height:100px;
+      z-index:2;
+     
+
+   
+}
